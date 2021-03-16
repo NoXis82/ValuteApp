@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ValuteApp</string>
+    <string name="test">test</string>
+    <string name="label_feed_fragment">Список валют</string>
+
+    <string name="valute_id">ID: %s</string>
+
+</resources>

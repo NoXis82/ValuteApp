@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/item_spacing"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_spacing"
+        tools:context=".FeedFragment">
+
+        <TextView
+            android:id="@+id/tv_valute_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_numcode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_valute_numcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_charcode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_id" />
+
+        <TextView
+            android:id="@+id/tv_valute_charcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_numcode"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_nominal"/>
+
+        <TextView
+            android:id="@+id/tv_valute_nominal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_numcode"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_name"/>
+
+        <TextView
+            android:id="@+id/tv_valute_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_nominal"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_value"/>
+
+        <TextView
+            android:id="@+id/tv_valute_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_name"
+            app:layout_constraintBottom_toTopOf="@+id/tv_valute_previous"/>
+
+        <TextView
+            android:id="@+id/tv_valute_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/test"
+            android:layout_marginBottom="@dimen/common_spacing"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_valute_value"
+            app:layout_constraintBottom_toTopOf="@+id/barrierBottom"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="tv_valute_id, tv_valute_numcode,tv_valute_charcode,tv_valute_nominal,tv_valute_name,tv_valute_value,tv_valute_previous" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
