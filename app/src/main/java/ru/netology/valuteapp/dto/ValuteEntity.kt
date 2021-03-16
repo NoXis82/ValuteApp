@@ -1,7 +1,6 @@
 package ru.netology.valuteapp.dto
 
 import androidx.room.*
-import java.math.BigDecimal
 
 @Entity
 data class ValuteEntity(
@@ -23,7 +22,7 @@ data class ValuteEntity(
             nominal,
             name,
             value,
-            previous
+            previous,
         )
 
     companion object {
@@ -38,4 +37,7 @@ data class ValuteEntity(
             dto.previous
         )
     }
+
 }
+
+fun List<ValuteEntity>.toDto(): List<Valute> = map(ValuteEntity::toDto)

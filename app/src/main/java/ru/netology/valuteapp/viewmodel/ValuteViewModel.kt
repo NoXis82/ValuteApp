@@ -30,8 +30,8 @@ class ValuteViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch {
             _state.value = StateModel(refreshing = true)
             try {
-                val valute = repository.getAll()
-                _state.value = StateModel(refreshing = valute.isEmpty())
+                repository.getAll()
+                _state.value = StateModel(refreshing = false)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
@@ -42,8 +42,8 @@ class ValuteViewModel(application: Application) : AndroidViewModel(application) 
         viewModelScope.launch {
             _state.value = StateModel(loading = true)
             try {
-                val valute = repository.getAll()
-                _state.value = StateModel(loading = valute.isEmpty())
+                repository.getAll()
+                _state.value = StateModel(loading = false)
             } catch (e: IOException) {
                 e.printStackTrace()
             }

@@ -2,7 +2,11 @@
     <string name="app_name">ValuteApp</string>
     <string name="test">test</string>
     <string name="label_feed_fragment">Список валют</string>
-
     <string name="valute_id">ID: %s</string>
-
+    <string name="valute_numCode">NumCode: %s</string>
+    <string name="valute_charCode">CharCode: %s</string>
+    <string name="valute_nominal">Nominal: %s</string>
+    <string name="valute_name">Name: %s</string>
+    <string name="valute_value">Value: %s</string>
+    <string name="valute_previous">Previous: %s</string>
 </resources>
