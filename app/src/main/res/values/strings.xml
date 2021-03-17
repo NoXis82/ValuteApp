@@ -9,4 +9,5 @@
     <string name="valute_name">Name: %s</string>
     <string name="valute_value">Value: %s</string>
     <string name="valute_previous">Previous: %s</string>
+    <string name="fragment_converter">Конвертер валют</string>
 </resources>

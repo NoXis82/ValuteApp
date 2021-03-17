@@ -10,7 +10,9 @@ import ru.netology.valuteapp.R
 import ru.netology.valuteapp.databinding.ValuteCardBinding
 import ru.netology.valuteapp.dto.Valute
 
-class ValuteAdapter : ListAdapter<Valute, ValuteViewHolder>(ValuteDiffCallback()) {
+class ValuteAdapter(
+    private val onInteractionListener: IOnInteractionListener
+) : ListAdapter<Valute, ValuteViewHolder>(ValuteDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ValuteViewHolder {
         val valuteView = ValuteCardBinding.inflate(
@@ -18,7 +20,7 @@ class ValuteAdapter : ListAdapter<Valute, ValuteViewHolder>(ValuteDiffCallback()
             parent,
             false
         )
-        return ValuteViewHolder(valuteView)
+        return ValuteViewHolder(valuteView, onInteractionListener)
     }
 
     override fun onBindViewHolder(holder: ValuteViewHolder, position: Int) {
@@ -28,7 +30,8 @@ class ValuteAdapter : ListAdapter<Valute, ValuteViewHolder>(ValuteDiffCallback()
 }
 
 class ValuteViewHolder(
-    private val binding: ValuteCardBinding
+    private val binding: ValuteCardBinding,
+    private val onInteractionListener: IOnInteractionListener
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(valute: Valute, context: Context) {
         binding.apply {
@@ -40,6 +43,9 @@ class ValuteViewHolder(
             tvValuteName.text = context.getString(R.string.valute_name, valute.name)
             tvValuteValue.text = context.getString(R.string.valute_value, valute.value)
             tvValutePrevious.text = context.getString(R.string.valute_previous, valute.previous)
+            binding.root.setOnClickListener {
+                onInteractionListener.onClickItems(valute)
+            }
         }
     }
 }

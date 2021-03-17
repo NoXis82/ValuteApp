@@ -9,7 +9,38 @@
         android:id="@+id/feedFragment"
         android:name="ru.netology.valuteapp.fragments.FeedFragment"
         android:label="@string/label_feed_fragment"
-        tools:layout="@layout/fragment_feed"/>
+        tools:layout="@layout/fragment_feed">
+
+
+        <action
+            android:id="@+id/action_feedFragment_to_converterFragment"
+            app:destination="@id/converterFragment">
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/converterFragment"
+        android:name="ru.netology.valuteapp.fragments.ConverterFragment"
+        android:label="@string/fragment_converter"
+        tools:layout="@layout/fragment_converter">
+        <argument
+            android:name="value"
+            android:defaultValue=" "
+            app:argType="string" />
+        <argument
+            android:name="previous"
+            android:defaultValue=" "
+            app:argType="string" />
+        <argument
+            android:name="nominal"
+            app:argType="integer"
+            android:defaultValue="1" />
+        <argument
+            android:name="name"
+            android:defaultValue=" "
+            app:argType="string" />
+    </fragment>
 
 
 </navigation>

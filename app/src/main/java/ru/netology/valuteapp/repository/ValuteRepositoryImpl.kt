@@ -19,6 +19,4 @@ class ValuteRepositoryImpl(private val dao: ValuteDao) : IValuteRepository {
          dao.insertList(listValute.map(ValuteEntity.Companion::fromDto))
         return listValute
     }
-
-
 }
