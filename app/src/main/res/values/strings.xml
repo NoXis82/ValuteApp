@@ -10,4 +10,9 @@
     <string name="valute_value">Value: %s</string>
     <string name="valute_previous">Previous: %s</string>
     <string name="fragment_converter">Конвертер валют</string>
+    <string name="valute_in">Рубли</string>
+    <string name="label_result">= %s</string>
+    <string name="error_empty">Введите значение в поле Рубли</string>
+
+
 </resources>

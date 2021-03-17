@@ -9,12 +9,11 @@ import androidx.navigation.NavController
 import kotlinx.coroutines.launch
 import ru.netology.valuteapp.App
 import ru.netology.valuteapp.dto.Valute
-import ru.netology.valuteapp.fragments.FeedFragment
 import ru.netology.valuteapp.fragments.FeedFragmentDirections
 import ru.netology.valuteapp.model.StateModel
 import java.io.IOException
-import java.util.*
-import kotlin.concurrent.schedule
+import java.math.BigDecimal
+import java.math.RoundingMode
 
 class ValuteViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -64,4 +63,9 @@ class ValuteViewModel(application: Application) : AndroidViewModel(application) 
             }
         }
     }
+
+    fun convert(value: String, nominal: Int, convert: String): String = BigDecimal(convert)
+            .divide(BigDecimal(value), 2, RoundingMode.CEILING)
+            .multiply(BigDecimal(nominal))
+            .toString()
 }
