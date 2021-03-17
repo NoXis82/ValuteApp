@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ValuteApp</string>
+    <string name="error_connect">Ошибка соединения</string>
     <string name="test">test</string>
     <string name="label_feed_fragment">Список валют</string>
     <string name="valute_id">ID: %s</string>
@@ -12,7 +13,6 @@
     <string name="fragment_converter">Конвертер валют</string>
     <string name="valute_in">Рубли</string>
     <string name="label_result">= %s</string>
+    <string name="valute_info">%1s : %2s</string>
     <string name="error_empty">Введите значение в поле Рубли</string>
-
-
 </resources>

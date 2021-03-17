@@ -23,7 +23,7 @@ class ConverterFragment : Fragment() {
         val name = arguments?.let { ConverterFragmentArgs.fromBundle(it).name.trim() }
         val nominal = arguments?.let { ConverterFragmentArgs.fromBundle(it).nominal } ?: 1
         val value = arguments?.let { ConverterFragmentArgs.fromBundle(it).value.trim() }.orEmpty()
-        binding.tvValueName.text = name
+        binding.tvValueName.text = context?.getString(R.string.valute_info, name, value)
         binding.fabBtnSave.setOnClickListener {
             with(binding.etInputValue) {
                 if (TextUtils.isEmpty(text)) {
