@@ -27,7 +27,6 @@ class FeedFragment : Fragment() {
         val binding = FragmentFeedBinding.inflate(layoutInflater)
         val adapter = ValuteAdapter(object : IOnInteractionListener {
             override fun onClickItems(valute: Valute) {
-
                 viewModel.clickItem(valute, findNavController())
             }
         })

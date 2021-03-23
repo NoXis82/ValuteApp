@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit
 private const val BASE_URL = "https://www.cbr-xml-daily.ru/"
 private val client = OkHttpClient.Builder()
     .connectTimeout(30, TimeUnit.SECONDS)
+    .addInterceptor(ApiInterceptor())
     .build()
 private val retrofit = Retrofit.Builder()
     .baseUrl(BASE_URL)
