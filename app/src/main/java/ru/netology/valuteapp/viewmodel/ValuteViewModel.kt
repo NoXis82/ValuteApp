@@ -6,7 +6,7 @@ import androidx.lifecycle.*
 import androidx.navigation.NavController
 import androidx.work.*
 import kotlinx.coroutines.launch
-import ru.netology.valuteapp.App
+import ru.netology.valuteapp.application.App
 import ru.netology.valuteapp.R
 import ru.netology.valuteapp.dto.Valute
 import ru.netology.valuteapp.fragments.FeedFragmentDirections

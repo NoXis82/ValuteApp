@@ -5,7 +5,7 @@ import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import ru.netology.valuteapp.App
+import ru.netology.valuteapp.application.App
 
 class UploadWorker(context: Context, params: WorkerParameters) : CoroutineWorker(context, params) {
 

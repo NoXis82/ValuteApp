@@ -1,4 +1,4 @@
-package ru.netology.valuteapp
+package ru.netology.valuteapp.application
 
 import android.app.Application
 import ru.netology.valuteapp.db.AppDb
